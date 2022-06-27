@@ -136,11 +136,11 @@ function transition() {
 }
 function pageHref(v) {
     if (v == vid1) {
-        location.href = 'https://mulbul2.cafe24.com/Multiverse/pages/grimja.html';
+        location.href = 'https://mulbul2.cafe24.com/Multiverse/docs/grimja.html';
     } else if (v == vid2) {
-        location.href = 'https://mulbul2.cafe24.com/Multiverse/pages/drive.html';
+        location.href = 'https://mulbul2.cafe24.com/Multiverse/docs/drive.html';
     } else if (v == vid3) {
-        location.href = 'https://mulbul2.cafe24.com/Multiverse/pages/chakatapa.html';
+        location.href = 'https://mulbul2.cafe24.com/Multiverse/docs/chakatapa.html';
     }
 }
 function stopTl() {
