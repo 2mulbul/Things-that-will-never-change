@@ -136,11 +136,11 @@ function transition() {
 }
 function pageHref(v) {
     if (v == vid1) {
-        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/grimja.html';
+        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/pages/grimja.html';
     } else if (v == vid2) {
-        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/drive.html';
+        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/pages/drive.html';
     } else if (v == vid3) {
-        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/chakatapa.html';
+        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/pages/chakatapa.html';
     }
 }
 function stopTl() {
