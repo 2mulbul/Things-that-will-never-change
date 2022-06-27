@@ -136,11 +136,11 @@ function transition() {
 }
 function pageHref(v) {
     if (v == vid1) {
-        location.href = 'https://mulbul2.cafe24.com/Multiverse/docs/grimja.html';
+        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/docs/grimja.html';
     } else if (v == vid2) {
-        location.href = 'https://mulbul2.cafe24.com/Multiverse/docs/drive.html';
+        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/docs/drive.html';
     } else if (v == vid3) {
-        location.href = 'https://mulbul2.cafe24.com/Multiverse/docs/chakatapa.html';
+        location.href = 'https://2mulbul.github.io/Things-that-will-never-change/docs/chakatapa.html';
     }
 }
 function stopTl() {
