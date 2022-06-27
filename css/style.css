@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'Eulyoo1945-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Eulyoo1945-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RixYeoljeongdo_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+:root {
+    --my-font-main: calc(16px + 0.24vw);
+    --my-font-select: calc(16px + 0.24vw);
+  
+    --vertical-square-padding: calc(15px + 0.24vw);
+    --horizontal-square-padding: calc(1.7 * (15px + 0.24vw));
+  
+    --vertical-round-padding: calc(17px + 0.24vw);
+    --horizontal-round-padding: calc(1.7 * (15px + 0.24vw));
+  }
+* {
+    box-sizing: border-box; 
+}
+html, body {
+    cursor: url(../icon/default.svg),auto;
+    display:block;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-size:62.5%;
+    overflow:hidden;
+    background-color: #fff8f0;
+    background-image: url(../texture/natural-paper.png);
+    transition: all 0.3s ease;
+    transition-property: cursor;
+    
+    /*transition: background-color 1s ease, background-image 1s ease;*/
+}
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9997;
+    background-color: #0a0a09;
+    background-image: url(../texture/black-paper.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.key-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9998;
+    position: relative;
+}
+.key-text{
+    text-align: center;
+    line-height: 170%;
+    color: rgb(228,228,228);
+    font-family: "Eulyoo1945-Regular";
+    font-size: 2rem;
+    background-color: transparent;
+    margin-bottom:3rem;
+}
+.key-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: url(../icon/key.svg), auto;
+    height: 8rem;
+}
+.key-icon{
+    height: 4rem;
+    position: absolute;
+
+}
+.key-backcircle{
+    content: "";
+    background-color: #121211;
+    background-image: url(../texture/black-paper.png);
+    box-shadow: inset 0.5px 0.5px 1px 0px rgba(200,200,199,0.2), 0 0px 10px rgba(0 0 0 / 0.5);
+    height: 8rem;
+    width:8rem;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+}
+
+#title-text {
+    z-index: 9999;
+    /*cursor: pointer;*/
+    position: absolute;
+    top:3.4rem;
+    left: 3.4rem;
+    width: 9rem;
+    height: 9rem;
+}
+
+#texts {
+    z-index: 1000;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.trigger {
+    cursor: url(../icon/key.svg),auto;
+}
+.door-container {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    position:absolute;
+    bottom:10%;
+    right:3%;
+    z-index: 8000;
+}
+.doorAsk {
+    font-family: 'Eulyoo1945-Regular';
+    font-size: 1.6rem;
+    color:black;
+    padding-right: 1rem;
+    opacity:0%
+}
+#door {
+    opacity: 50%;
+}
+.material-icons.md-30 { 
+    font-size: 2.8rem;
+    color:black;
+}
+body.bookinfo {
+    cursor: url(../icon/book.svg),auto;
+}
+.size80vid {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: solid 2px;
+    height: 80vh; 
+    width: auto;
+}
+.hiddenVid {
+    display: none;
+}
+.본문-container {
+    transform: translateY(-50%);
+    font-family: "Eulyoo1945-Regular";
+    font-size: var(--my-font-main);
+    line-height: 150%;
+    text-align: left;
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    padding: var(--vertical-square-padding) var(--horizontal-square-padding);
+    background: white;
+    outline: 0.2rem solid black;
+  }
+  .본문-container-textOnly {
+    transform: translateY(-50%);
+    font-family: "Eulyoo1945-Regular";
+    font-size: var(--my-font-main);
+    line-height: 150%;
+    text-align: left;
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    padding: var(--vertical-square-padding) var(--horizontal-square-padding);
+  }
+  .대사-container {
+    transform: translateY(-50%);
+    font-family: "NanumSquare";
+    font-size: var(--my-font-select);
+    line-height: 150%;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    padding: var(--vertical-round-padding) var(--horizontal-round-padding);
+    background: white;
+    border: solid 0.2rem black;
+    border-radius: 50px;
+  }
+  .선택지-container {
+    transform: translateY(-50%);
+    font-family: "NanumSquare";
+    font-size: var(--my-font-select);
+    line-height: 150%;
+    text-align: left;
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    padding: var(--vertical-round-padding) var(--horizontal-round-padding);
+    color: white;
+    background: black;
+    border-radius: 50px;
+    border: solid 1px white;
+    animation: glowing 1s linear infinite alternate;
+  }
+#본문1 {
+    position: absolute;
+    top:75%;
+    right:4rem; 
+}
+
+#본문2 {
+    position: absolute;
+    top: 23%;
+    left:4rem;
+}
+#본문3-1 {
+    position: absolute;
+    top: 15%;
+    right:4rem; 
+}
+#본문3-2 {
+    position: absolute;
+    top: 25%;
+    right:4rem; 
+}
+
+#본문4-1 {
+    position: absolute;
+    top: 20%;
+    left:4rem;
+}
+
+#본문4-2 {
+    position: absolute;
+    top: 30%;
+    left:8rem;
+}
+
+#본문5 {
+    position: absolute;
+    top: 48%;
+    right:4rem; 
+}
+#본문6-1 {
+    position: absolute;
+    top: 40%;
+    left:4rem;
+}
+#본문6-2 {
+    position: absolute;
+    top: 50%;
+    left:8rem;
+}
+#본문7 {
+    position: absolute;
+    top: 38%;
+    right:4rem; 
+}
+
+#대사1 {
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 48%;
+    left:50%;
+}
+#본문8 {
+    position: absolute;
+    top: 38%;
+    left: 4rem;
+}
+#본문9 {
+    position: absolute;
+    top: 52%;
+    right: 4rem;
+}
+#본문10 {
+    position: absolute;
+    top: 75%;
+    right: 4rem;
+}
+.bookInfo-container {
+    position:absolute;
+    z-index: 9999;
+    font-family: 'Eulyoo1945-Regular';
+    font-size: 2rem;
+    line-height: 150%;
+    text-align :left;
+    display: inline-block;
+    padding: 3rem 3rem;
+    background: white;
+    outline: 0.2rem solid black;
+}

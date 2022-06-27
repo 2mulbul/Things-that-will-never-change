@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'bgo6zrf',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="../css/styleDark-1.css">
+
+    <title>그림자놀이</title>
+</head>
+<body>
+    <div id="loader">
+        <div class="key-container hidden">
+            <div class="key-text">
+                이야기는 열쇠에 대한 힌트를 담고 있습니다.<br>
+                여러가지 열쇠를 다양한 방법으로 작동시켜 다음으로 나아가세요.
+            </div>
+            <div class="key-image">
+                <img class="key-icon" src="../icon/key.svg"></img>
+                <div class="key-backcircle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="project-title" onClick="location.href='https://mulbul2.cafe24.com/Multiverse/pages/index.html'">변하지<br>않는<br>것</div>-->
+    <div id="title-text" class="project-title" onClick="location.href='https://mulbul2.cafe24.com/Multiverse/pages/index.html'">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 529.98 506">
+            <defs>
+                <style>
+                    .title-text-fill {
+                        fill:#fff;
+                        
+                    }
+                </style>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <path stroke="black" stroke-width="2" id="변-s" class="변 title-text-fill" d="M27.6,156.23V108.59l36.77-3.39v21.45l102.87-9.17v38.75ZM128.82,80.8l-15.3,1.77v9.35L12.38,102.63V1H49V23.24l28-2.85V1h36.59v9.78L128.82,9V1h36.77V104.38l-36.77,3.75ZM49,51.57V68.72l28-3v-17Zm64.55-9v8.16L128.82,49V40.83Z" transform="translate(-0.7 -0.5)"/>
+                    <path stroke="black" stroke-width="2" id="하-s" class="하 title-text-fill" d="M303.78,1h36.77V55.88L360,53.69V90.08l-19.44,2.21V153l-36.77,7.14Zm-61,154.49c-29.77,0-47.54-16.12-47.54-43.14V90c0-8.19,2.16-14.25,6.63-18.52l.89-.87H188.07V39.51h109V70.59H282.6l.89.87c4.47,4.27,6.63,10.33,6.63,18.52v22.37C290.12,139.37,272.42,155.49,242.77,155.49Zm-.19-81.23c-7.94,0-10.76,7.18-10.76,13.89V109.6c0,6.71,2.87,13.89,11,13.89s10.76-7.18,10.76-13.89V88.15C253.53,81.44,250.66,74.26,242.58,74.26ZM208.24,33.37V1.73h69.6V33.37Z" transform="translate(-0.7 -0.5)"/>
+                    <path stroke="black" stroke-width="2" id="지-s" class="지 title-text-fill" d="M493.41,1h36.77V153l-36.77,7.14ZM364.69,132.57,410,63.73V37H375.5V3.38H483.79V37H447.67V64.09l43.27,66.64-30,20.35-32.4-47.31-33.87,49.15Z" transform="translate(-0.7 -0.5)"/>
+                    <path stroke="black" stroke-width="2" id="않-s" class="않 title-text-fill" d="M120.07,331.44c-18.72,0-29-8.74-29-24.62a27.75,27.75,0,0,1,.55-5.59l.13-.66-4,.38V279.22l79.32-8v22.64l-6.27.57.25.63a31.46,31.46,0,0,1,2.35,11.73c0,15.42-11.6,24.62-31,24.62Zm12.3-34.38a13.52,13.52,0,0,0-1.54.09l-8.06.74c-4,.47-6.14,2-6,4.2.15,2,2,3.13,5.05,3.13a15.34,15.34,0,0,0,1.74-.11l8-.73c3.84-.24,6-1.65,6-4C137.62,298.34,135.61,297.06,132.37,297.06Zm-115.22,34V257.76l34.94-3.56v44.37l33.19-3.3v35.8Zm83.43-81.56,55.48-5.77v23.75l-55.48,5.77Zm-42.31-.77c-32.71,0-53-15.12-53-39.47S25.56,170,58.27,170s53,15.05,53,39.29S91,248.74,58.27,248.74Zm0-51.34c-10.3,0-16.45,4.5-16.45,12,0,7.32,6.15,11.69,16.45,11.69s16.27-4.37,16.27-11.69S68.31,197.4,58.27,197.4Zm63.21-23.94h36.78v16.38l19.43-2.2V224l-19.43,2.2V238l-36.78,3.75Z" transform="translate(-0.7 -0.5)"/>
+                    <path stroke="black" stroke-width="2" id="는-s" class="는 title-text-fill" d="M201.09,328.69v-46l36.78-2.32v19.44l108.55-7.52v36.37ZM187,248.79l169.17-10.93v28.7L187,277.5Zm13.76-76.06H237.5V207.6l104.88-6.78v29.8l-141.65,9.29Z" transform="translate(-0.7 -0.5)"/>
+                    <path stroke="black" stroke-width="2" id="것-s" class="것 title-text-fill" d="M17.75,478.5l60.83-25.76V437.1l37.32-3.22v17l60.66,25.76-17.1,29.2L97.15,480.29,34.82,505.88ZM1.39,417.86l71.14-24.51V376.18H13.85v-30h96.37V372.1l18.6-1.94v-24.7h36.77v96.23l-36.77,3.75V406.56l-18.6,1.94v6l-94.78,32.2Z" transform="translate(-0.7 -0.5)"/>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <div id="texts" class="hidden">
+        <p id="본문1" class="본문-container">
+            차단막의 효과는 영구적이며 제거 방법은 존재하지 않습니다.<br>그래도 수술을 시행하시겠습니까?
+        </p>
+        <p id="대사1" class="선택지-container textTrigger">
+            예, 하겠습니다.
+        </p>
+        <p id="본문2" class="본문-container">
+            수술을 한다면 당신은 타인의 감정을 공감할 수 없게 됩니다.<br>그래도 수술을 시행하시겠습니까?
+        </p>
+        <p id="대사2"  class="선택지-container textTrigger">
+            예, 하겠습니다.
+        </p>
+        <p id="본문3" class="본문-container" >
+            마지막으로, 당신의 선택은 자발적인 선택입니까?
+        </p>
+        <p id="대사3" class="선택지-container textTrigger">
+            예, 저의 선택입니다.
+        </p>
+        <p id="본문4-1" class="본문-container" data-index-number="0">
+            본 영상은 증거자료로 녹화되며
+        </p>
+        <p id="본문4-2" class="본문-container" data-index-number="0">
+            당신은 수술 이후의 부작용 및 의료사고 등의 이유로<br>본 영상을 법정에서 증거로 쓰실 수 있습니다. 
+        </p>
+        <p id="본문5" class="본문-container" >
+            수술동의 서명을 위해,<br>앞의 카메라를 바라보고 자신의 이름을 세 번 말하십시오. 
+        </p>
+        <p id="대사4" class="선택지-container textTrigger">
+            서 이라.
+        </p>
+        <p id="대사5" class="대사-container">
+            서&nbsp;이&nbsp;라.
+        </p>
+        <p id="대사6" class="대사-container">
+            서&emsp;이&emsp;라.
+        </p>
+        <p id="본문7" class="본문-container" >
+            도아는 그대로였다.
+        </p>
+        <p id="본문8" class="본문-container" data-index-number="0">
+            떠났을 때 모습과 조금도 바뀌지 않았다.
+        </p>
+        <p id="본문9" class="본문-container" >
+            나는 20년을 기다렸지만<br>이 애로서는 고작 몇년 만에 내게 돌아온 것이다.
+        </p>
+        <p id="대사7" class="대사-container">
+            이라야.
+        </p>
+        <p id="대사8" class="대사-container">
+            세상이 많이 바뀌었더라.
+        </p>
+        <p id="대사9-1" class="대사-container">
+            그 수술에 대한 이야기도 들었어.
+        </p>
+        <p id="대사9-2" class="대사-container">
+            네가 받았다는 것도.
+        </p>
+        <p id="대사10" class="대사-container">
+            너는 서이라가 아닌 것 같기도 해.
+        </p>
+        <p id="대사11" class="대사-container">
+            내가 여기로 돌아오는 동안 줄곧 상상했던 너와의 재회는 이게 아니었거든.
+        </p>
+        <p id="대사12" class="대사-container">
+            처음이야, 너를 맞히지 못한 거.
+        </p>
+        <p id="본문10" class="본문-container">
+            문이 닫힌다.
+        </p>
+        <p id="본문10-2" class="본문-container">
+            그제야 내가 오른 손바닥으로 가슴께를 문지르고 있었다는 것을 알아차렸다.
+        </p>
+        <p id="본문11-1" class="본문-container">
+            도아를 처음 만난 것은 대학 병원 로비에서였다.
+        </p>
+        <p id="본문11-2" class="본문-container">
+            나는 그즈음 소아병동의 터줏대감 자리에 들려던 참이었다.
+        </p>
+        <p id="본문12" class="본문-container">
+            멀리서 나를 지켜보던 도아는<br>졸고 있던 외할머니 손을 놓고 내게 다가와 손을 붙잡았다.
+        </p>               
+        <p id="본문13" class="본문-container">
+            도아는 나의 고통을 끊임없이 나눠 가졌고,
+        </p>
+        <p id="본문14" class="본문-container">
+            그 일에 ‘그림자놀이’라는 특별한 이름을 붙였다.
+        </p>
+        <p id="본문15" class="본문-container">
+            내가 눈을 깜빡이면 도아도 눈을 깜빡였고,
+        </p>
+        <p id="본문16-1" class="본문-container">
+            내가 손등으로 눈물을 훔치면
+        </p>
+        <p id="본문16-2" class="본문-container">
+            도아도 나를 따라 자신의 마른 눈가를 문질렀다.
+        </p>
+        <p id="본문17" class="본문-container-textOnly">
+            도아의 이야기를 이어 가보자면,
+        </p>
+        <p id="본문18" class="본문-container-textOnly">
+            도아에게는 여덟 살 차이 나는 동생과 부모님이 있었지만
+        </p>
+        <p id="본문19" class="본문-container-textOnly">
+            도아가 열다섯 살 되던 해에 도아만 남겨두고 모두 세상을 떠났다.
+        </p>
+        <p id="본문20" class="본문-container-textOnly">
+            도아는 절망 속 지푸라기처럼 살아남았다.
+        </p>
+        <p id="본문21-1" class="본문-container">
+            그 즈음부터 도아는 우주로 나가는 일을 꿈꿨는데, 
+        </p>
+        <p id="본문21-2" class="본문-container">
+            지구에 말이 통하는 사람이 나밖에 남아있지 않은 것 같다며<br>우주로 나가고 싶다고 했다. 
+        </p>
+        <p id="본문22" class="본문-container">
+            하필 네가 있던 곳이 우주여서
+        </p>
+        <p id="본문23" class="본문-container">
+            나는 하늘을 바라볼 때마다 네 생각을 할 수 밖에 없었고,
+        </p>
+        <p id="본문24" class="본문-container">
+            내가 숨 쉬는 모든 곳이 네 아래에 있었다.
+        </p>
+        <p id="본문25" class="본문-container">
+            우리가 정의 내리지 않고 묻어둔 관계에 대해
+        </p>
+        <p id="본문26" class="본문-container">
+            홀로 공식을 세워 풀어 내려가기를 반복했고
+        </p>
+        <p id="본문27" class="본문-container">
+            가끔은 네가 가까이 다가가는 그 블랙홀 속에 답이 있을지도 모른다는 생각을 했다. 
+        </p>
+        <p id="본문28" class="본문-container">
+            점차 기다림이 일상이 되며
+        </p>
+        <p id="본문29" class="본문-container">
+            하늘을 보고 너를 떠올리는 일이 더는 아프지 않게 다가왔을 때,
+        </p>
+        <p id="본문30" class="본문-container">
+            인류가 다음 인류를 꿈꾸며 뇌 속의 거울을 깨뜨리는 일에 동참한 뒤 눈을 떴을 때, 
+        </p>
+        <p id="본문31" class="본문-container">
+            어쩐지 너는 우주에서 영원히 돌아오지 않을 거라는 알 수 없는 확신이 들었다.
+        </p>
+        <p id="본문32" class="본문-container">
+            그랬던 네가 돌아와서 내 안에 균형을 이루고 있던 무언가가 뒤틀어진 것이 분명하다.
+        </p>
+        <p id="본문33" class="본문-container">
+            도아의 병실에서 신음소리가 들려왔다.
+        </p>
+        <p id="본문34" class="본문-container">
+            몸속에 퍼진 죽음이 차츰차츰 도아의 살점을 뜯어내고 있었다.
+        </p>
+        <p id="본문35" class="본문-container">
+            평정을 유지하려는 도아의 다급한 호흡을 따라 내쉬어보지만
+        </p>
+        <p id="본문36" class="본문-container">
+            세 번째 숨을 내뱉고는 행동을 멈춘다.
+        </p>
+        <p id="본문37" class="본문-container">
+            나는 도아의 고통을 나눠 가질 수 없다.
+        </p>
+        <p id="본문38" class="본문-container">
+            고통에 잔뜩 찡그린 얼굴 표정이 전부 보이지만<br>그것은 도아가 고통스러움을 드러내는 수단일 뿐이다.
+        </p>
+        <p id="본문39" class="본문-container">
+            카트에서 모르핀 약통을 찾아 도아에게 다가갔다.
+        </p>
+        <p id="본문40" class="본문-container">
+            도아가 대뜸 내 팔을 붙잡는다.
+        </p>
+        <p id="본문41" class="본문-container">
+            무엇을 원하는지 알 수 없다.
+        </p>
+        <p id="본문42" class="본문-container">
+            고통을 없애려면 주사를 놓아야 하는데,
+        </p>
+        <p id="본문43" class="본문-container">
+            도아는 그걸 알면서도 손을 놓지 않고, 나를 바라보면서 말했다.
+        </p>
+        <p id="대사13" class="대사-container">
+            너 왜,
+        </p>
+        <p id="대사14" class="대사-container">
+            나를,
+        </p>
+        <p id="대사15" class="대사-container">
+            그런 눈으로......
+        </p>
+        <p id="본문44" class="본문-container">
+            주사를 놓는다.
+        </p>
+        <p id="본문45" class="본문-container">
+            몸속을 빠르게 타고 들어간 모르핀이 고통을 잊게 만들고 난 후에야<br>도아는 기절하듯 잠에 들었다.
+        </p>
+        <p id="본문46" class="본문-container">
+            몇 시간 뒤 도아의 병실을 찾았을 때,<br>도아는 실눈을 뜬 채 천장을 보며 누워 있었다.
+        </p>
+        <p id="본문47" class="본문-container">
+            잠들어 있지는 않지만 그렇다고 깨어 있는 상태도 아닌 듯 보였다.
+        </p>
+        <p id="본문48" class="본문-container">
+            병원에 있다보면 흔히 볼 수 있는 환자들의 모습이다. 
+        </p>
+        <p id="본문49" class="본문-container">
+            조금씩 삶을 포기하는 지점.
+        </p>
+        <p id="본문50" class="본문-container">
+            고통보다 편안한 안식을 바랄 때의 공허한 눈빛들이 딱 저런 모습이었다.
+        </p>
+        <p id="본문51" class="본문-container">
+            도아는 시선을 옮겨 서랍장을 바라봤다. 
+        </p>
+        <p id="본문52" class="본문-container">
+            정확히는 그 위에 올려진 다이어리였다.
+        </p>
+        <p id="대사16" class="대사-container">
+            내 이야기가 궁금하다며.
+        </p>
+        <p id="대사17" class="대사-container">
+            그거 봐.
+        </p>
+        <div class="마지막1st-container">
+            <p id="마지막1" >
+                가슴께를 어루만진다.
+            </p>
+            <p id="마지막2" >
+                오래도록.
+            </p>
+            <p id="마지막3" >
+                손바닥이 아리도록.
+            </p>
+        </div>
+        <p id="마지막4" class="마지막-container">
+            언어를 잃어버린 기분이었다.
+        </p>
+        <p id="마지막5" class="마지막-container">
+            어떤 말이 위로가 되는지, 공감이 되는지 떠오르지 않았다. 
+        </p>
+        <p id="마지막6" class="마지막-container">
+            도아는 내 그림자가 되어 내 아픔을 조금씩 나눠가졌다.
+        </p>
+        <div class="마지막2-container">
+            <p id="마지막7" class="마지막-container">
+                나도 그럴 수 있기를 빌어.
+            </p>
+            <p id="마지막8" class="마지막-container">
+                내 깨진 거울로 너를 얼마만큼 담아낼 수 있을지 모르겠지만.
+            </p>
+        </div>
+        <div class="마지막2-container">
+            <p id="마지막9" class="마지막-container">
+                도아가 일어나면 끝내 하지 못한 이야기를 마저 할 것이고,
+            </p>
+            <p id="마지막10" class="마지막-container">
+                끝내 풀지 않은 공식을 풀어낼 것이다.
+            </p>
+        </div>
+        <div class="마지막2-container">
+            <p id="마지막11" class="마지막-container">
+                네 행동을 따라 할 것이고,
+            </p>
+            <p id="마지막12" class="마지막-container">
+                네 말을 따라 읊으며
+            </p>
+            <p id="마지막13" class="마지막-container">
+                너를 등 뒤에서 끌어안고 괜찮다고 속삭일 것이다.
+            </p>
+        </div>
+        <div class="마지막2-container">
+            <p id="마지막14" class="마지막-container">
+                어쩌면 우리 사이의 가장 강력한 감정 하나가,
+            </p>
+            <p id="마지막15" class="마지막-container">
+                내 모든 것을 원 상태로 돌려놓을지도 모르겠다. 
+            </p>
+        </div>
+        <p id="마지막16" class="마지막-container">
+            그로부터 나흘 동안 도아는 나와 함께 있었다.
+        </p>
+        <p id="마지막17" class="마지막-container">
+            마지막에는 만나서 반가웠다는 이야기를 했다.
+        </p>
+        <div class="마지막2-container">
+            <p id="마지막18" class="마지막-container">
+                네가 죽었다는 것을 오래도록 곱씹을 것이다.
+            </p>
+            <p id="마지막19" class="마지막-container">
+                그러다 어느 순간 사탕이 쪼개지듯 통증이 밀려오겠지.
+            </p>
+        </div>
+        <p id="마지막20" class="마지막-container">
+            그게 무슨 느낌일지는, 아직은 모르겠다.
+        </p>
+
+    </div>
+    <!--<div class="door-container">
+        <span class="doorAsk" >이동하시겠습니까?</span>
+        <a href="https://mulbul2.cafe24.com/Multiverse/pages/index.html">
+            <span class="material-icons md-30 nav-items" id="door">sensor_door</span>
+        </a>
+    </div>-->
+    
+    <div class="next hidden" id="next1">
+        <div class=소제목>다음 장</div>
+        <div class=본제목>재회</div>
+    </div>
+
+    <div class="etcTrigger hidden" id="trFace"></div> 
+
+    <div class="next  hidden" id="next2">
+        <div class=소제목>다음 장</div>
+        <div class=본제목>도아의 이야기</div>
+    </div>
+    
+    <div class="etcTrigger hidden" id="trHand"></div>
+    <div class="etcTrigger hidden" id="trPicture"></div>
+
+    <div class="next  hidden" id="next3">
+        <div class=소제목>다음 장</div>
+        <div class=본제목>통증</div>
+    </div>
+
+    <div class="etcTrigger hidden" id="trEye"></div>
+
+    <div class="next  hidden" id="next4">
+        <div class=소제목>다음 장</div>
+        <div class=본제목>일기장</div>
+    </div>
+
+    <div class="etcTrigger hidden" id="trKnock"></div>
+    <div class="etcTrigger hidden" id="trSweat"></div>
+    <div class="etcTrigger hidden" id="trEye2"></div>
+    <div class="etcTrigger hidden" id="trDiary"></div>
+
+    <div class="letter letter1  hidden">
+        <section class="letter-content1">
+            <div class="letter-date">
+                <span id="date-lable">Date.</span>
+                <span id="date-content">2037 / 12 / 05</span>
+            </div>
+            <div class="letter-main">
+                <p class="letter-main-1st">
+                    외로움에 대한 소설을 써야겠다.<br>
+                    돌아간다면. 다시 지구에 돌아갈 수 있다면.<br>
+                    주인공은 이름이 없고, 성별이 없고, 얼굴이 없는 존재로 설정해야겠다.<br> 
+                    그런 것들로 규정되는 편견을 피하기 위해서.</p>
+                <p class="letter-main-2nd">그리고 사연을 만들어줘야지, 아주 커다란 슬픔을.<br>
+                    그래서 고향 행성을 견디지 못하고 추방당하듯 떠났다는 설정을 가져와야겠다.<br>
+                    그렇게 우주를 떠도는 것이다.<br>
+                    일부러 말이 통하지 않는 외계생명체를 찾아서.<br>
+                    안녕이라는 말조차도 알아듣지 못하는,
+                    그래서 한마디를 전달하는 데 아주 오랜 시간과 노력이 필요한 존재를 만나기 위해서.</p>
+            </div>
+        </section>
+    </div>
+    <div class="letter letter2  hidden">
+        <section class="letter-content2">
+            <div class="letter-date">
+                <span id="date-lable">Date.</span>
+                <span id="date-content">2037 / 12 / 05</span>
+            </div>
+            <div class="letter-main">
+                <p class="letter-main-1st">
+                    하지만 결국 그곳에서도 답을 찾지 못하겠지.<br>
+                    그렇게 돌아갈 것이다.<br>
+                    상처만 가득 안았던 본인의 행성으로, 
+                    오직 한 존재만을 바라보기 위해서.<br>
+                    오직 그 존재에게 위로받고 공감받기 위해서.</p>
+                <p class="letter-main-2nd">그거면 충분하다는 것을, 이 주인공은 먼 우주에 나와서야 깨닫는 것이다.<br>
+                    끊임없이 그 존재에게 돌아가는 상상을 한다.<br>
+                    이해할 수 없는 말들로부터, 상처뿐인 언어로부터 멀어진 우주에서 제 숨소리를 유일한 소음으로 삼으면서.</p>
+
+            </div>
+        </section>
+    </div>
+    <div class="letter letter3  hidden">
+        <section class="letter-content3">
+            <div class="letter-date">
+                <span id="date-lable">Date.</span>
+                <span id="date-content">2037 / 12 / 05</span>
+            </div>
+            <div class="letter-main">
+                <p class="letter-main-1st">
+                    그렇게 마침내 모든 여정을 끝내고 돌아가, 다시 만나겠지.<br>
+                    그 존재는 많이 야원 주인공을 보고 무작정 끌어안을 것이다.<br>
+                    외로웠지만 슬프지 않은 이야기가 되겠다.<br>
+                    끝내 자신을 온전히 이해해주는 존재를 만나게 됐으므로.</p>
+                <p class="letter-main-2nd">
+                    지구로 돌아가야겠다.<br>소리가 있고, 빛이 있고, 그림자가 있고, 설움이 있고, 가시가 있고, 원망과 미움이 있고, 그렇지만 네가 있는 곳으로.</p>
+            </div>
+        </section>
+    </div>
+    <div class="etcTrigger hidden" id="trMirror"></div>
+    <p id="bookInfo" class="bookInfo-container"></p>
+
+    <video class="size80vid" id="vid1" muted="muted" tabindex="0" preload="auto" >
+        <source src="../videos/그림자놀이_1[카메라].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid2" muted="muted" tabindex="0" preload="auto" >
+        <source src="../videos/그림자놀이_2[눈뜨기].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid3" muted="muted" tabindex="0"  preload="auto"  loop>
+        <source src="../videos/그림자놀이_3[눈깜빡].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid4" muted="muted" tabindex="0"  preload="auto" >
+        <source src="../videos/그림자놀이_4[눈감기].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid5" muted="muted" tabindex="0"  preload="auto" >
+        <source src="../videos/그림자놀이_5[손잡기].mp4" type="video/mp4">
+    </video>
+    <video id="vid6" class="hidden" muted="muted" tabindex="0"  preload="auto" >
+        <source src="../videos/그림자놀이_6[가족사진].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid7" muted="muted" tabindex="0"  preload="auto" >
+        <source src="../videos/그림자놀이_7[우주로].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid8" muted="muted" tabindex="0"  preload="auto"  loop>
+        <source src="../videos/그림자놀이_8[문].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid9" muted="muted" tabindex="0"  preload="auto" >
+        <source src="../videos/그림자놀이_9[주사].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid10" muted="muted" tabindex="0"  preload="auto" >
+        <source src="../videos/그림자놀이_10[시선+다이어리].mp4" type="video/mp4"> 
+    </video>
+    <video class="size80vid hidden" id="vid11" muted="muted" tabindex="0"  preload="auto" >
+        <source src="../videos/그림자놀이_11[거울].mp4" type="video/mp4"> 
+    </video>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/Draggable.min.js" integrity="sha512-K5lS5qToD89PSx3gJnHO4H7ZtHTM+lDphSr1sBzBJt0FpLXb7JYI8EtW1cAhhMDTLhf8hc9afgEJrj38JJb52A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        var loader = document.querySelector("#loader");
+        var textsAll =document.querySelector("#texts");
+        var keyImage = document.querySelector(".key-image");
+        var keyCircle = document.querySelector(".key-backcircle");
+        var keyContainer = document.querySelector(".key-container");
+
+        var loadAni = new TimelineMax();
+        TweenMax.set(".key-icon, .key-backcircle, .key-text", { autoAlpha: 0 });
+
+
+        window.addEventListener('load', () => {
+            keyContainer.classList.remove("hidden");
+            console.log("F load");
+            loadAni.to(".key-icon",1.5,{autoAlpha:1,ease: "quad"},0)
+                    .fromTo(".key-icon",2, {rotation:-5},{rotation:5,  ease: Elastic. easeOut.config( 5, 0.2)},0)
+                    .to(".key-backcircle",2.5,{autoAlpha:1,ease: "quad"},1.5)
+                    .to(".key-text",1.5,{autoAlpha:1,ease: "quad"}, 1.5)
+                    .call(TriggerKey,[keyImage],3);
+        
+        })
+
+        function TriggerKey(tr) {
+            tr.addEventListener("click", startStory);
+            console.log("F TriggerKey");
+        }
+        function startStory() {
+            loadAni.clear();
+            loadAni.restart();
+            loadAni.to(".key-container",1,{autoAlpha:0,ease: "quad"},0)
+                    .to("#loader",1,{autoAlpha:0,ease: "quad"},0)        
+                    .call(removeLoader,[],0)
+                    this.removeEventListener("click", startStory);
+                    console.log("F startstory");
+        }
+        
+        
+        //window.addEventListener('load', () => {
+        //    setTimeout(removeLoader, 3000);
+        //})
+        let mainAudio = new Audio('../audio/mainAudio.mp3');
+
+            mainAudio.volume = 0.5;
+
+            mainAudio.loop = true;
+
+        function removeLoader(){
+            loader.classList.add("hidden");
+            console.log("LOAD COMPLETE");
+            var s = 0;
+            var a = 0;
+            textsAll.classList.remove("hidden");
+            revealHide(s, a);
+            mainAudio.play();
+        }
+
+    </script>
+    
+    <script src="../js/cursor.js"></script>
+    <script src="../js/textReveal-g.js"></script>
+    
+
+    <!-- <script src="textReveal-2.js"></script> -->
+
+
+</body>
+</html>>
